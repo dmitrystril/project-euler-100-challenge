@@ -1,2 +1,32 @@
-# ProjectEuler100
-My attempt to commit to the #ProjectEuler100 challenge - solve first 100 tasks of Project Euler.
+## Project Euler 100 Challenge
+
+Project Euler tasks solutions #ProjectEuler100
+
+
+### Building and running on localhost
+
+First install dependencies:
+
+```sh
+npm install
+```
+
+To run in hot module reloading mode:
+
+```sh
+npm start
+```
+
+To create a production build:
+
+```sh
+npm run build-prod
+```
+
+### Running
+
+Open the file `dist/index.html` in your browser
+
+### Credits
+
+Made with [createapp.dev](https://createapp.dev/)
