@@ -1,13 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Root = styled.div`
+import Task1 from './tasks/task1/Task1';
 
+const Root = styled.div`
+  width: 100%;
 `;
 
 const App = () => (
   <Root>
-    Test test
+    <Task1 />
   </Root>
 );
 
