@@ -1,7 +1,8 @@
 import * as React from 'react';
-import * as ReactDOM from "react-dom";
+import * as ReactDOM from 'react-dom';
 
-import App from './app';
+import './main/resource/style/index.css';
+import App from './App';
 
-var mountNode = document.getElementById("app");
+let mountNode = document.getElementById('root');
 ReactDOM.render(<App />, mountNode);
