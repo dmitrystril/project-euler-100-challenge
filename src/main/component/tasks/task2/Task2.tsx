@@ -8,21 +8,21 @@ const Root = styled.div`
   width: 100%;
 `;
 
-const Task1 = () => {
+const Task2 = () => {
   return (
     <Root>
       <TaskHeader
-        id={1}
-        title="Multiples of 3 and 5"
-        solvedBy={909597}
+        id={2}
+        title="Even Fibonacci numbers"
+        solvedBy={725141}
         rating={5}
-        description={StringConst.TASK_DESCRIPTIONS.TASK_1}
+        description={StringConst.TASK_DESCRIPTIONS.TASK_2}
         date={new Date('2020-01-10')}
       />
 
-      Task # 1
+      Task # 2
     </Root>
   );
 };
 
-export default Task1;
+export default Task2;
