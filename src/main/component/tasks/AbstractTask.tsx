@@ -37,7 +37,7 @@ abstract class AbstractTask extends React.Component {
     return (
       <AceEditor
         mode="javascript"
-        theme="tomorrow"
+        theme="github"
         fontSize={14}
         width="100%"
         height="400px"

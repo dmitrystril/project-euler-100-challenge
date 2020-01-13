@@ -4,7 +4,7 @@ import AbstractTask from '../AbstractTask';
 import TaskHeader from '../TaskHeader';
 
 class Task1 extends AbstractTask {
-  renderHeader(): React.Node {
+  renderHeader(): React.ReactNode {
     return (
       <TaskHeader
           id={1}

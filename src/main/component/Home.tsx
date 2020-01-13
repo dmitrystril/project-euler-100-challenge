@@ -1,7 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-
+import { Link } from 'react-router-dom'
+;
 import TASK_LIST from './tasks/taskList';
 
 const Root = styled.div`
