@@ -38,7 +38,6 @@ const ItemValue = styled.div`
 interface TaskHeaderProps {
   id: number;
   title: string;
-  description: string;
   solvedBy: number;
   rating: number;
   date: Date;
@@ -48,7 +47,6 @@ const TaskHeader: React.FC<TaskHeaderProps> = (props: TaskHeaderProps) => {
   const {
     id,
     title,
-    description,
     solvedBy,
     rating,
     date,
@@ -62,10 +60,6 @@ const TaskHeader: React.FC<TaskHeaderProps> = (props: TaskHeaderProps) => {
       <Item>
         <ItemCaption>Title:</ItemCaption>
         <ItemValue>{title}</ItemValue>
-      </Item>
-      <Item>
-        <ItemCaption>Description:</ItemCaption>
-        <ItemValue>{description}</ItemValue>
       </Item>
       <Item>
         <ItemCaption>Solved by:</ItemCaption>

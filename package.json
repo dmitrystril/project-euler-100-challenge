@@ -12,8 +12,10 @@
     "build-prod": "parcel build src/index.html"
   },
   "dependencies": {
+    "ace-builds": "^1.4.7",
     "antd": "^3.26.6",
     "react": "^16.12.0",
+    "react-ace": "^8.0.0",
     "react-dom": "^16.12.0",
     "react-router-dom": "^5.1.2",
     "styled-components": "^4.4.1"
