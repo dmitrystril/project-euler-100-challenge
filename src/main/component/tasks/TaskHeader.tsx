@@ -1,7 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
+import { PageHeader } from 'antd';
 
 import StringConst from '../../../constant/StringConst';
+import { withRouter } from 'react-router-dom';
 
 const Root = styled.div`
   display: flex;
@@ -10,12 +12,6 @@ const Root = styled.div`
   padding: 20px 10px;
   background-color: #F2F3F4;
   box-shadow: 0 3px 2px -2px gray;
-`;
-
-const TaskCaption = styled.div`
-  text-align: center;
-  margin-bottom: 10px;
-  font-weight: 600;
 `;
 
 const Item = styled.div`
@@ -41,6 +37,7 @@ interface TaskHeaderProps {
   solvedBy: number;
   rating: number;
   date: Date;
+  history?: any;
 };
 
 const TaskHeader: React.FC<TaskHeaderProps> = (props: TaskHeaderProps) => {
@@ -50,17 +47,21 @@ const TaskHeader: React.FC<TaskHeaderProps> = (props: TaskHeaderProps) => {
     solvedBy,
     rating,
     date,
+    history,
   } = props;
 
   const link = StringConst.TASK_LINK + id;
 
   return (
     <Root>
-      <TaskCaption>Task #{id}</TaskCaption>
-      <Item>
-        <ItemCaption>Title:</ItemCaption>
-        <ItemValue>{title}</ItemValue>
-      </Item>
+      <PageHeader
+        style={{
+          marginLeft: "6px",
+        }}
+        onBack={history.goBack}
+        title={'Task #' + id}
+        subTitle={title}
+      />
       <Item>
         <ItemCaption>Solved by:</ItemCaption>
         <ItemValue>{solvedBy}</ItemValue>
@@ -88,4 +89,4 @@ const TaskHeader: React.FC<TaskHeaderProps> = (props: TaskHeaderProps) => {
   );
 };
 
-export default TaskHeader;
+export default withRouter(TaskHeader as any);

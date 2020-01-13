@@ -16,7 +16,11 @@ const Caption = styled.div`
   font-weight: 500;
 `;
 
-const Result = styled.span`
+const Result = styled.div`
+  margin: 20px 0 0 40px;
+`;
+
+const ResultValue = styled.span`
   margin-left: 5px;
   color: #FFFFFF;
   background-color: green;
@@ -24,6 +28,7 @@ const Result = styled.span`
 
 const Solution = styled.div`
   width: 100%;
+  margin: 0 40px;
 `;
 
 const evaluateResult = () => {
@@ -77,9 +82,9 @@ const Task1 = () => {
         {getCode()}
       </Solution>
 
-      <Caption>Result:
-        <Result>{evaluateResult()}</Result>
-      </Caption>
+      <Result>Result:
+        <ResultValue>{evaluateResult()}</ResultValue>
+      </Result>
     </Root>
   );
 };
