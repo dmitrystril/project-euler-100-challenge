@@ -68,7 +68,7 @@ const TaskHeader: React.FC<TaskHeaderProps> = (props: TaskHeaderProps) => {
       </Item>
       <Item>
         <ItemCaption>Rating:</ItemCaption>
-        <ItemValue>{rating}</ItemValue>
+        <ItemValue>{rating}%</ItemValue>
       </Item>
       <Item>
         <ItemCaption>Date:</ItemCaption>

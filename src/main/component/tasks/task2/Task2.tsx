@@ -1,7 +1,6 @@
 import React from 'react';
 
 import TaskHeader from '../TaskHeader';
-import StringConst from '../../../../constant/StringConst';
 import AbstractTask from '../AbstractTask';
 
 class Task2 extends AbstractTask {
@@ -12,8 +11,7 @@ class Task2 extends AbstractTask {
         title="Even Fibonacci numbers"
         solvedBy={725141}
         rating={5}
-        description={StringConst.TASK_DESCRIPTIONS.TASK_2}
-        date={new Date('2020-01-10')}
+        date={new Date('2020-01-14')}
       />
     );
   };
