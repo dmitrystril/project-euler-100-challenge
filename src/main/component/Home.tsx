@@ -1,8 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom'
-;
+import { Link } from 'react-router-dom';
+import { ReactSVG } from 'react-svg';
+
 import TASK_LIST from './tasks/taskList';
+import SVG from '../resource/image/svg';
 
 const Root = styled.div`
   display: flex;
@@ -38,10 +40,23 @@ const TaskContainer = styled.div`
 `;
 
 const Task = styled.div`
+  display: flex;
   width: 100%;
-  text-align: center;
-  box-shadow: 0 1px 2px -2px blue;
   margin: 15px 0;
+  justify-content: center;
+`;
+
+const OkImage = styled(ReactSVG)`
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+  margin-right: 10px;
+`;
+
+const CustomLink = styled(Link)`
+  display: flex;
+  align-items: center;
 `;
 
 const Home: React.FC = () => {
@@ -60,7 +75,8 @@ const Home: React.FC = () => {
       <TaskContainer>
         {taskIds.map((item: number, index: number) => (
           <Task key={index}>
-            <Link to={`/task/${item}`}>Task #{item}</Link>
+            <OkImage src={SVG.ok} />
+            <CustomLink to={`/task/${item}`}>Task #{item}</CustomLink>
           </Task>
         ))}
       </TaskContainer>
