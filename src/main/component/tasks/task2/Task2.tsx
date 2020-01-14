@@ -1,16 +1,12 @@
 import React from 'react';
-import styled from 'styled-components';
 
 import TaskHeader from '../TaskHeader';
 import StringConst from '../../../../constant/StringConst';
+import AbstractTask from '../AbstractTask';
 
-const Root = styled.div`
-  width: 100%;
-`;
-
-const Task2 = () => {
-  return (
-    <Root>
+class Task2 extends AbstractTask {
+  renderHeader(): React.ReactNode {
+    return (
       <TaskHeader
         id={2}
         title="Even Fibonacci numbers"
@@ -19,10 +15,27 @@ const Task2 = () => {
         description={StringConst.TASK_DESCRIPTIONS.TASK_2}
         date={new Date('2020-01-10')}
       />
+    );
+  };
 
-      Task # 2
-    </Root>
-  );
+  evaluateResult() {
+    const limit = 4000000;
+    let firstNumber = 1;
+    let secondNumber = 2;
+
+    let sumOfEvenNumbers = 0;
+    while (secondNumber < limit) {
+      if (secondNumber % 2 == 0) {
+        sumOfEvenNumbers += secondNumber;
+      }
+
+      const nextNumber = firstNumber + secondNumber;
+      firstNumber = secondNumber;
+      secondNumber = nextNumber;
+    }
+
+    return sumOfEvenNumbers;
+  }
 };
 
 export default Task2;
