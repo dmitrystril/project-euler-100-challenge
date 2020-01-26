@@ -9,6 +9,7 @@ import Task8 from './task8/Task8';
 import Task9 from './task9/Task9';
 import Task10 from './task10/Task10';
 import Task11 from './task11/Task11';
+import Task12 from './task12/Task12';
 
 const TASK_LIST = {
   TASK_1: Task1,
@@ -22,6 +23,7 @@ const TASK_LIST = {
   TASK_9: Task9,
   TASK_10: Task10,
   TASK_11: Task11,
+  TASK_12: Task12,
 };
 
 export default TASK_LIST;
